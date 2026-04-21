@@ -1,39 +1,207 @@
-# Python
+# ─── Python ──────────────────────────────────────────────────────────────────
+
+# Bytecode / caches
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
+
+# Virtual environments
 .venv/
 venv/
 env/
-*.egg-info/
-*.egg
-.eggs/
+ENV/
+.python-version
+
+# Build / packaging
 build/
 dist/
+*.egg
+*.egg-info/
+.eggs/
+wheels/
+*.whl
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Local config / secrets
+# Tool caches
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+.pytest_cache/
+.tox/
+.nox/
+
+# Coverage
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.cache/
+nosetests.xml
+
+# Type-checkers
+.pyright/
+pyrightconfig.json.bak
+
+# ─── Secrets / local config ──────────────────────────────────────────────────
+
 .env
-.env.local
+.env.*
+!.env.example
 *.local.json
+secrets/
+credentials/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+config.local.toml
 
-# OS
-.DS_Store
-Thumbs.db
+# direnv
+.envrc
 
-# Editors
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
+# ─── Audio artifacts (test recordings, TTS outputs) ──────────────────────────
 
-# Logs
-*.log
-logs/
-
-# Audio test artifacts
 *.wav
 *.mp3
 *.pcm
+*.m4a
+*.ogg
+*.flac
+*.opus
+*.aiff
+*.aac
+tts_output/
+stt_samples/
+
+# ─── Local run / install artifacts ───────────────────────────────────────────
+
+.holler/
+*.plist.backup
+install.log
+uninstall.log
+
+# ─── macOS ───────────────────────────────────────────────────────────────────
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# ─── Linux ───────────────────────────────────────────────────────────────────
+
+*~
+.nfs*
+.directory
+.Trash-*
+
+# ─── Windows ─────────────────────────────────────────────────────────────────
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ─── Editors / IDEs ──────────────────────────────────────────────────────────
+
+# JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+auto-save-list/
+
+# Helix / Zed
+.helix/
+.zed/
+
+# ─── Logs / tmp ──────────────────────────────────────────────────────────────
+
+*.log
+logs/
+tmp/
+tmp_*
+*.tmp
+
+# ─── Node (if docs tooling or JS plugins sneak in) ───────────────────────────
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.yarn-integrity
+bun.lockb
+
+# ─── Hugging Face / torch caches (if local STT fallback ever added) ──────────
+
+.cache/huggingface/
+.cache/torch/
+models/
+*.onnx
+*.gguf
+*.bin
+*.pt
+*.safetensors
+
+# ─── Claude / AI tooling local state ─────────────────────────────────────────
+
+.claude/settings.local.json
+.claude/projects/
+.aider*
+.cursor/
+.serena/
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+
+*.bak
+*.orig
+*.rej
+.scratch/
+scratch/
