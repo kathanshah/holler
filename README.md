@@ -39,4 +39,4 @@ Coming soon. See `docs/design.md` for the planned setup flow.
 
 ## License
 
-TBD.
+MIT — see [LICENSE](LICENSE).
